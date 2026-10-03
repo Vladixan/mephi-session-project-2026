@@ -1,0 +1,20 @@
+Иденти | Командная строка                                                                                          | Дата и время     | Действия       | Изменен
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    18 | install -y libcap-ng-utils                                                                                | 2026-10-03 19:31 | Install        |    1   
+    17 | install -y nginx                                                                                          | 2026-10-03 19:30 | Install        |    1   
+    16 | remove -y tcpdump                                                                                         | 2026-10-03 19:15 | Removed        |    2   
+    15 | remove -y libcap-ng-utils                                                                                 | 2026-10-03 19:12 | Removed        |    1   
+    14 | remove -y nginx                                                                                           | 2026-10-03 19:12 | Removed        |    1  <
+    13 | install -y nginx                                                                                          | 2026-10-03 17:47 | Install        |    1 > 
+    12 | update -y                                                                                                 | 2026-10-03 17:43 | I, U           |   20   
+    11 | remove -y tcpdump                                                                                         | 2026-10-03 17:15 | Removed        |    2   
+    10 | remove -y nginx                                                                                           | 2026-10-03 17:13 | Removed        |    1  <
+     9 | install -y nginx libcap-ng-utils                                                                          | 2026-10-03 15:24 | Install        |    9 > 
+     8 | update -y                                                                                                 | 2026-10-01 18:54 | I, O, U        |   94 EE
+     7 | install git                                                                                               | 2026-09-16 15:28 | Install        |    6   
+     6 | autoremove                                                                                                | 2026-09-16 15:27 | Removed        |    4   
+     5 | remove git                                                                                                | 2026-09-16 15:27 | Removed        |    2   
+     4 | install git                                                                                               | 2026-09-16 15:20 | Install        |    2   
+     3 | remove git                                                                                                | 2026-09-16 15:20 | Removed        |    2   
+     2 | install git                                                                                               | 2026-09-16 15:05 | Install        |    6  <
+     1 |                                                                                                           | 2026-09-07 18:01 | Install        |  555 >E

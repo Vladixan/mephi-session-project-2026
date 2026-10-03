@@ -1,0 +1,64 @@
+    1  hostnamectl set-hostname mephi-2026.domain.local
+    2  hostnamectl
+    3  vi /etc/hosts
+    4  exec bash
+    5  hostname -f
+    6  ping -c 4 8.8.8.8
+    7  ping -c 4 8.8.8.8 > ~/ping.out
+    8  dnf install -y nginx
+    9  dnf update -y
+   10  dnf install -y libcap-ng-utils
+   11  dnf download --resolve tcpdump --destdir=/tmp
+   12  rpm -ivh /tmp/*.rpm
+   13  dnf history
+   14  dnf history > dnf.out
+   15  lsblk
+   16  parted /dev/sdb
+   17  partprobe /dev/sdb
+   18  lsblk
+   19  mkfs.ext4 -L "MEPHI_WEB" /dev/sdb1
+   20  mkdir -p /mephi-web
+   21  vi /etc/fstab
+   22  mount /mephi-web
+   23  systemctl daemon-reload
+   24  systemctl start nginx
+   25  systemctl enable nginx
+   26  systemctl status nginx
+   27  journalctl -u nginx -b
+   28  journalctl -u nginx -b > ~/journalctl.out
+   29  mkdir -p /data/mephi-2026
+   30  groupadd -g 4444 curators
+   31  groupadd -g 4445 mephi-dev
+   32  useradd -u 5501 -G mephi-dev user1
+   33  useradd -u 5502 -G mephi-dev user2
+   34  useradd -u 5503 -G mephi-dev user3
+   35  useradd -u 5504 -G curators curator1
+   36  useradd -u 5505 -G curators curator2
+   37  passwd user1
+   38  passwd user2
+   39  passwd user3
+   40  passwd curator1
+   41  passwd curator2
+   42  chown root:mephi-dev /data/mephi-2026
+   43  chmod 2770 /data/mephi-2026
+   44  setfacl -m g:curators:r-X /data/mephi-2026
+   45  setfacl -d -m g:curators:r-X /data/mephi-2026
+   46  setcap cap_net_raw,cap_net_admin=eip /usr/sbin/tcpdump
+   47  getcap /usr/sbin/tcpdump
+   48  getcap /usr/sbin/tcpdump > ~/getcap.out
+   49  vi /mephi-web/index.html
+   50  vi /etc/nginx/conf.d/mephi.conf
+   51  vi /etc/selinux/targeted/contexts/files/file_contexts.local
+   52  restorecon -Rv /mephi-web
+   53  systemctl restart nginx
+   54  curl http://localhost
+   55  vi /etc/security/access.conf
+   56  vi /etc/security/pwquality.conf
+   57  chage -M 90 user1
+   58* chage -M 90 user2 [B
+   59  chage -M 90 user3
+   60  chage -M 90 curator1
+   61  chage -M 90 curator2
+   62  cat /mephi-web/index.html
+   63  curl http://localhost
+   64  history > ~/history.out

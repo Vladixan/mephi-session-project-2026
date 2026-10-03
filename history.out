@@ -55,10 +55,46 @@
    55  vi /etc/security/access.conf
    56  vi /etc/security/pwquality.conf
    57  chage -M 90 user1
-   58* chage -M 90 user2 [B
+   58  chage -M 90 user2 [B
    59  chage -M 90 user3
    60  chage -M 90 curator1
    61  chage -M 90 curator2
    62  cat /mephi-web/index.html
    63  curl http://localhost
    64  history > ~/history.out
+   65  ls
+   66  stat /data/mephi-2026 > ~/stat.out
+   67  stat /data/mephi-2026
+   68  getenforce
+   69  getenforce > ~/getenforce.out
+   70  stat /mephi-web
+   71  stat /mephi-web >> stat.out
+   72  curl http://localhost/ > ~/curl.out
+   73  cat curl.out
+   74  lsblk
+   75  cat history.out
+   76  lsblk
+   77  cd /mnt
+   78  ls
+   79  cd ~/
+   80  ls
+   81  mount /dev/sdc1 /mnt/usb
+   82  cp curl.out /mnt/usb
+   83  ls /mnt/usb
+   84  cp dnf.out /mnt/usb
+   85  cp getcap.out /mnt/usb
+   86  cp getenforce.out /mnt/usb
+   87  cp history.out /mnt/usb
+   88  cp journalctl.out /mnt/usb
+   89  cp ping.out /mnt/usb
+   90  cp stat.out /mnt/usb
+   91  ls /mnt/usb
+   92  cp /etc/fstab /mnt/usb
+   93  cp /etc/passwd /mnt/usb
+   94  cp /etc/shadow /mnt/usb
+   95  cp /etc/group /mnt/usb
+   96  cp /etc/security/pwquality.conf /mnt/usb
+   97  ls /mnt/usb
+   98  man usermod
+   99  mv history.out history_.out
+  100  history > history.out
